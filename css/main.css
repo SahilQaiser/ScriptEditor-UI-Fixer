@@ -1,0 +1,15 @@
+.hide {
+    display: none!important;
+}
+
+.show {
+    display: block;
+}
+.full-screen {
+    width: 100%;
+    max-width: 100%!important;
+}
+
+.l10 {
+    margin-left: 10px;
+}

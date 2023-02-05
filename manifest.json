@@ -1,0 +1,35 @@
+{
+    "name": "ScriptEditor UI Fixer",
+    "description": "Will try to Fix the Wormhole UI for ScriptEditor",
+    "version": "0.0.1",
+    "action": {},
+    "web_accessible_resources": [
+        {
+          "resources": [
+            "images/icon32.png"
+          ],
+          "matches": ["*://wormhole.unicommerce.com/*"]
+        }
+      ],
+    "permissions": [
+        "scripting",
+        "activeTab",
+        "tabs"
+    ],
+    "content_scripts": [{
+        "matches": ["*://wormhole.unicommerce.com/*"],
+        "js": ["contentScript.js"],
+        "css": ["css/main.css"]
+    }],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": ["*://wormhole.unicommerce.com/*"],
+    "icons": {
+        "16": "images/icon16.png",
+        "32": "images/icon32.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "manifest_version": 3
+}
