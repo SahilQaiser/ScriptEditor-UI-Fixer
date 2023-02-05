@@ -6,7 +6,6 @@
   console.log("ReadMode Button Added : " + readModeBtnAdded);
 
   const scriptContainerDiv = document.getElementById("sciptContainerDiv");
-  let statisticsContainer = document.getElementById("statistics-container");
   const ltDivBlock = document.getElementsByClassName("control-bar")[0];
 
   if (readModeBtnAdded == false && ltDivBlock != null) {
@@ -30,6 +29,7 @@
         if (typeof scriptContainerDiv !== "undefined" && document.getElementById("multiVersionSelect") != null) {
             console.log("scriptContainerDiv not null");
             let scriptContainer = scriptContainerDiv.getElementsByClassName("CodeMirror")[0];
+            let statisticsContainer = document.getElementById("statistics-container");
             if (readModeOn == false) {
                 scriptContainer.classList.add("full-screen");
                 statisticsContainer.classList.add("hide");
